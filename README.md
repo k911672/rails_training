@@ -66,6 +66,33 @@ bin/dev
 | `bin/setup` | 依存関係のインストールと DB 準備（サーバー起動なし: `bin/setup --skip-server`） |
 | `bin/rails db:migrate` | マイグレーションを実行 |
 | `bin/rails db:seed` | シードデータを投入 |
+| `bin/rails g controller users index` | Users コントローラと index アクションを生成 |
+
+## 学習メモ
+
+### Users コントローラの生成
+
+次のコマンドで Users コントローラと `index` アクションを生成しました。
+
+```bash
+bin/rails g controller users index
+```
+
+主な生成・変更内容は次のとおりです。
+
+| パス | 内容 |
+|------|------|
+| `app/controllers/users_controller.rb` | `UsersController`（`index` アクション） |
+| `app/views/users/index.html.erb` | index 用ビュー |
+| `app/helpers/users_helper.rb` | ヘルパー |
+| `test/controllers/users_controller_test.rb` | コントローラテスト |
+| `config/routes.rb` | `get "users/index"` が追加される |
+
+ブラウザでは次の URL で確認できます。
+
+```text
+http://localhost:3000/users/index
+```
 
 ## 構成
 
