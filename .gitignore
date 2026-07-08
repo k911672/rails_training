@@ -1,0 +1,29 @@
+# Bundler
+/.bundle
+/vendor/bundle
+
+# Rails
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+/public/assets
+.byebug_history
+
+# Environment
+.env
+.env.*
+
+# OS / Editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Kamal
+.kamal/secrets*
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
